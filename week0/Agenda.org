@@ -1,0 +1,20 @@
+* Review of basic C++
+ + Hello World, one more time
+ + cin / cout
+ + while loops
+ + checking errors on cin
+ + do-while loops
+ + let's write a guessing game right quick
+ + now for-loops
+ + okay but what are for-loops good for?
+ + for iterating over arrays
+* Arrays and pointers
+ + An array
+ + What is an array?
+   + A weekly pill organizer
+ + Making arrays
+ + Using arrays
+ + What is an array, really?
+   + A pointer and a promise
+ + What's a pointer?
+ + Pointer arithmetic

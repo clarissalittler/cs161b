@@ -1,0 +1,12 @@
+* Agenda
+ + Arrays and pointers (redux)
+   + The type of pointers
+   + How to use a pointers
+   + What's the point (haha)
+   + Why you don't have to pass arrays by reference
+ + Arrays of characters
+   + (I'm so sorry for what I must do)
+   + Wave goodbye to the string type
+   + Null-terminated C-style strings
+   + Writing functions on C-strings
+   + Setting C-strings
