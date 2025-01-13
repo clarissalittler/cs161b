@@ -10,3 +10,10 @@
    + Null-terminated C-style strings
    + Writing functions on C-strings
    + Setting C-strings
+
+* Arrays of characters
+ + we can represent strings as char[]
+ + each character array has *a fixed size*
+ + /but/ we want character arrays to be flexible in the size of the message
+ + so we declare a biiiig character array that's the size of the maximum message
+ + use \0 (the null character) to mean "this is the end of what I'm currently using in the array"
