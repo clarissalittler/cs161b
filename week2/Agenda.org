@@ -1,0 +1,13 @@
+* Agenda
+** Structs
+ + Making your own datatypes
+ + Not as complicated as you'd think!
+ + Pet data with multiple arrays
+ + Pet data with an array of structs
+ + Isn't that nicer??
+** Multi-dimensional arrays
+ + Rows and columns
+ + Making multi-dimensional arrays
+ + new and delete
+ + Traversing multi-dimensional arrays
+** File I/O
