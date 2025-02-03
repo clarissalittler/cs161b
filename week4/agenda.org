@@ -1,0 +1,9 @@
+* Agenda
+ + Files and file I/O
+   + How to read from an existing file
+   + How to write to an existing file
+   + How to create a file if it doesn't exist
+ + Let's write a function to reverse individual lines in a text file
+ + Let's write a function that will parse a simple .csv file that holds the data for a struct
+ + Now tying it all together:
+   + A program that reads data from a file, if it exists, as a kind of database for a struct
