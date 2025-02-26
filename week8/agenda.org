@@ -1,0 +1,19 @@
+* Agenda
+ + Packaging an array and a size together in a struct
+ + What is a queue?
+   + FIFO: First-in, first-out
+   + This means we need to put data on one end and take it out from the other
+ + Arrays as queues
+ + Linked lists
+   + One of those really important tricks in CS
+   + You use pointers to connect a sequence of nodes
+   + Inserting at the beginning is easy
+   + Inserting at the end is /slightly/ harder
+ + Linked lists as queues!
+ + Your assignment: take this code and turn it into stacks instead of queues
+   + stacks are LIFO
+   + last-in-first out
+   + so you *push* and *pop* data from the same end instead of opposite ends
+   + Hints:
+     + For arrays there's an easier and a harder end to use as the top of the stack! If it seems hard, try the other!
+     + For linked lists this should be /really/ simple, don't overthink it
