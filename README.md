@@ -1,3 +1,3 @@
-# cs161b-winter-2025
+# cs161b
 
-Repo for cs161b winter '24/'25 edition
+Repo for cs161b
