@@ -1,0 +1,8 @@
+# Product inventory
+# Format: name quantity price
+
+Laptop 15 999.99
+Mouse 150 24.99
+Keyboard 75 79.99
+# This is a comment line
+Monitor 30 349.99

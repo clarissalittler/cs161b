@@ -1,0 +1,5 @@
+Hello and welcome to file I/O.
+This is a sample text file.
+It has multiple lines.
+Each line contains some words.
+We can read it in different ways!
