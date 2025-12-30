@@ -209,18 +209,16 @@ Each week folder contains:
 - ✅ examples-from-videos/week2/multiarray1commented.cpp (2D arrays)
 - **Gap**: No 2D array + player position tracking example (would be helpful)
 
-### Assignment 3: Image Transformer ⚠️ NEEDS MINOR SUPPORT
+### Assignment 3: Image Transformer ✅ WELL SUPPORTED
 **Required Skills**: Structs, dynamic memory, P3 file format, file I/O
 **Available Materials**:
 - ✅ Week 6 examples (dynamic memory)
-- ✅ examples-from-videos/week6/p1commented.cpp (P1 image parser)
+- ✅ examples-from-videos/week6/p1commented.cpp (P1 image parser - similar structure)
 - ✅ test.ppm files exist
-- ✅ pikachu.ppm exists for testing
+- ✅ assignments/pikachu.ppm - actual P3 format example for students
 - ✅ Week 4 file I/O examples
-- **Gaps**:
-  - ⚠️ P1 example provided, but assignment uses P3 (color) format
-  - ⚠️ No example showing how to modify pixel values
-  - **Recommendation**: Add `examples/week06-dynamic-memory/03-p3-basics.cpp`
+- ✅ Assignment explains P3 format clearly
+- **Note**: Intentionally leaves struct design as student exercise (good pedagogy)
 
 ### Assignment 4: Stack Implementation ✅ WELL SUPPORTED
 **Required Skills**: Array-based stacks, linked-list-based stacks, ADTs
@@ -246,8 +244,8 @@ To ensure students can **complete the assignments independently**, address these
 ### Priority 1: Essential for Independent Work
 1. **Getting Started Guide** in main README (compilation basics)
 2. **Testing guidance** for each assignment
-3. **P3 image example** for Assignment 3
-4. **Troubleshooting guide** for common errors
+3. **Troubleshooting guide** for common errors
+4. **Minimal scaffolding** for assignments (structure without giving away solutions)
 
 ### Priority 2: Significantly Helpful
 5. **Sample solution for Assignment 1** (sets expectations)
