@@ -14,6 +14,8 @@ You are required to complete the following tasks:
 
 ### Part 1: Array-Based Stack Implementation
 
+**Important:** The array-based and linked-list-based implementations should be in **two separate source files**, since they both define a `Stack` struct (with different contents).
+
 1. **Define a `Stack` struct** that uses a fixed-size array to store stack elements.
 
 2. Implement the following functions:
@@ -33,9 +35,11 @@ You are required to complete the following tasks:
    - `int value`: The data stored in the node.
    - `Stack* next`: A pointer to the next node in the stack.
 
+   Use a `Stack*` pointer (often called `top`) to represent the stack.
+
 2. Implement the following functions:
-   - `void push(Stack&* stack, int value)`: Add an element to the top of the stack.
-   - `int pop(Stack&* stack)`: Remove and return the top element of the stack. Print an error message if the stack is empty.
+   - `void push(Stack*& stack, int value)`: Add an element to the top of the stack.
+   - `int pop(Stack*& stack)`: Remove and return the top element of the stack. Print an error message if the stack is empty.
    - `int peek(const Stack* stack)`: Return the top element of the stack without removing it. Print an error message if the stack is empty.
    - `bool isEmpty(const Stack* stack)`: Return `true` if the stack is empty, otherwise return `false`.
 

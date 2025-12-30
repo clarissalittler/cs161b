@@ -78,6 +78,7 @@ Your program should:
 
 - Dynamic 2D arrays + file parsing structure: [examples-from-videos/week6/p1commented.cpp](../examples-from-videos/week6/p1commented.cpp)
 - Example P3 input file: [pikachu.ppm](pikachu.ppm)
+- Generalizing from P1 to P3: use the same file-parsing flow, but store each pixel as a `Pixel` struct with three fields (red, green, blue) instead of a single value.
 
 ## Reflection Questions
 
