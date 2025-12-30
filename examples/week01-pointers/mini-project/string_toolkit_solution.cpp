@@ -1,54 +1,62 @@
 /*
- * Mini-Project: String Toolkit
- *
- * Implement your own C-string functions without using the standard library.
- *
- * This is great practice for:
- * - Pointer arithmetic
- * - Understanding how C-strings work
- * - Writing functions that work with pointers
+ * Mini-Project: String Toolkit (Solution)
  */
 
 #include <iostream>
 using namespace std;
 
-// TODO: Implement this function
-// Returns the length of the string (not counting the null terminator)
 int myStrlen(const char* s) {
-    // Hint: walk through the string with a pointer or index
-    // until you find '\0', counting as you go
-    return 0;
+    int len = 0;
+    if (s == nullptr) {
+        return 0;
+    }
+    while (s[len] != '\0') {
+        len++;
+    }
+    return len;
 }
 
-// TODO: Implement this function
-// Copies the string from src to dest (including the null terminator)
-// Assumes dest has enough space!
 void myStrcpy(char* dest, const char* src) {
-    // Hint: copy characters one by one until you've copied the '\0'
-
+    if (dest == nullptr || src == nullptr) {
+        return;
+    }
+    int i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
 }
 
-// TODO: Implement this function
-// Returns:
-//   0 if the strings are equal
-//   negative if a comes before b alphabetically
-//   positive if a comes after b alphabetically
 int myStrcmp(const char* a, const char* b) {
-    // Hint: compare characters one by one
-    // If you find a difference, return the difference
-    // If both strings end at the same time, they're equal
-    return 0;
+    if (a == nullptr && b == nullptr) {
+        return 0;
+    }
+    if (a == nullptr) {
+        return -1;
+    }
+    if (b == nullptr) {
+        return 1;
+    }
+    while (*a && *a == *b) {
+        a++;
+        b++;
+    }
+    return static_cast<unsigned char>(*a) - static_cast<unsigned char>(*b);
 }
 
-// TODO: Implement this function
-// Reverses the string in place (modifies the original)
 void myReverse(char* s) {
-    // Hint: swap the first and last, then move inward
-    // You'll need to know the length first
-
+    if (s == nullptr) {
+        return;
+    }
+    int len = myStrlen(s);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = s[i];
+        s[i] = s[len - 1 - i];
+        s[len - 1 - i] = temp;
+    }
 }
 
-// Helper function to print a test result
 void test(const char* name, bool passed) {
     cout << (passed ? "[PASS] " : "[FAIL] ") << name << endl;
 }
@@ -94,7 +102,6 @@ int main() {
     test("ab -> ba", myStrcmp(rev4, "ba") == 0);
     cout << endl;
 
-    // Interactive demo
     cout << "=== Interactive Demo ===" << endl;
     char input[100];
     cout << "Enter a string (no spaces): ";
@@ -106,7 +113,7 @@ int main() {
     cout << "Reversed: " << input << endl;
 
     char another[100];
-    myReverse(input);  // Reverse back to original
+    myReverse(input);
     cout << "Enter another string to compare (no spaces): ";
     cin >> another;
 
@@ -121,27 +128,3 @@ int main() {
 
     return 0;
 }
-
-/*
- * Implementation hints:
- *
- * myStrlen:
- *   int len = 0;
- *   while (s[len] != '\0') len++;
- *   return len;
- *
- * myStrcpy:
- *   int i = 0;
- *   while (src[i] != '\0') {
- *       dest[i] = src[i];
- *       i++;
- *   }
- *   dest[i] = '\0';  // Don't forget the null terminator!
- *
- * myStrcmp:
- *   while (*a && *a == *b) { a++; b++; }
- *   return *a - *b;
- *
- * myReverse:
- *   Find the length, then swap s[0] with s[len-1], s[1] with s[len-2], etc.
- */

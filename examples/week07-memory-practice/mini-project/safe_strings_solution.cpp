@@ -1,15 +1,5 @@
 /*
- * Mini-Project: Memory-Safe Dynamic Strings
- *
- * Implement a set of functions for safely handling
- * dynamically-allocated C-strings.
- *
- * Focus on:
- * - No memory leaks
- * - No dangling pointers
- * - Safe handling of edge cases
- *
- * Test with valgrind!
+ * Mini-Project: Memory-Safe Dynamic Strings (Solution)
  */
 
 #include <iostream>
@@ -17,70 +7,65 @@
 #include <string>
 using namespace std;
 
-// TODO: Implement these functions
-
-// Allocate a string buffer of given capacity
-// Returns nullptr if capacity <= 0
-// Initializes to empty string (just null terminator)
 char* createString(int capacity) {
     if (capacity <= 0) return nullptr;
 
-    // TODO: Allocate capacity bytes
-    // Set first character to '\0'
-
-    return nullptr;
+    char* str = new char[capacity];
+    str[0] = '\0';
+    return str;
 }
 
-// Free a string and set pointer to nullptr
-// Safe to call with nullptr
 void freeString(char*& str) {
-    // TODO: Check if not null, delete, set to null
-
+    if (str != nullptr) {
+        delete[] str;
+        str = nullptr;
+    }
 }
 
-// Create a copy of src
-// Returns nullptr if src is nullptr
-// Caller must free the returned string
 char* copyString(const char* src) {
     if (src == nullptr) return nullptr;
 
-    // TODO: Calculate length, allocate, copy
-
-    return nullptr;
+    int len = static_cast<int>(strlen(src)) + 1;
+    char* copy = new char[len];
+    strcpy(copy, src);
+    return copy;
 }
 
-// Concatenate two strings into a new string
-// Handles nullptr inputs (treats as empty string)
-// Caller must free the returned string
 char* concatenate(const char* a, const char* b) {
-    // TODO: Handle nullptr cases
-    // Calculate total length needed
-    // Allocate new string
-    // Copy a, then append b
+    int lenA = (a != nullptr) ? static_cast<int>(strlen(a)) : 0;
+    int lenB = (b != nullptr) ? static_cast<int>(strlen(b)) : 0;
+    int total = lenA + lenB + 1;
 
-    return nullptr;
+    char* result = new char[total];
+    result[0] = '\0';
+
+    if (a != nullptr) {
+        strcpy(result, a);
+    }
+    if (b != nullptr) {
+        strcat(result, b);
+    }
+
+    return result;
 }
 
-// Resize a string buffer
-// If str is nullptr, creates a new string of newCapacity
-// If newCapacity is smaller, truncates the string
-// Preserves contents up to newCapacity-1
 void resizeString(char*& str, int newCapacity) {
     if (newCapacity <= 0) {
         freeString(str);
         return;
     }
 
-    // TODO: Create new buffer
-    // Copy old contents (if any)
-    // Free old buffer
-    // Update str to point to new buffer
+    char* newStr = new char[newCapacity];
+    newStr[0] = '\0';
 
+    if (str != nullptr) {
+        strncpy(newStr, str, newCapacity - 1);
+        newStr[newCapacity - 1] = '\0';
+        delete[] str;
+    }
+
+    str = newStr;
 }
-
-// ============================================================
-// TEST FUNCTIONS
-// ============================================================
 
 void testCreateAndFree() {
     cout << "=== Test createString/freeString ===" << endl;
@@ -97,11 +82,9 @@ void testCreateAndFree() {
         cout << "After free: s1 = " << (s1 == nullptr ? "nullptr" : "NOT null") << endl;
     }
 
-    // Edge case: zero capacity
     char* s2 = createString(0);
     cout << "createString(0) returns: " << (s2 == nullptr ? "nullptr" : "NOT null") << endl;
 
-    // Safe to free nullptr
     freeString(s2);
     cout << endl;
 }
@@ -119,7 +102,6 @@ void testCopyString() {
         freeString(copy);
     }
 
-    // Edge case: null input
     char* nullCopy = copyString(nullptr);
     cout << "copyString(nullptr) returns: " << (nullCopy == nullptr ? "nullptr" : "NOT null") << endl;
     cout << endl;
@@ -134,7 +116,6 @@ void testConcatenate() {
         freeString(result);
     }
 
-    // Edge cases
     result = concatenate(nullptr, "test");
     if (result != nullptr) {
         cout << "concatenate(nullptr, \"test\") = \"" << result << "\"" << endl;
@@ -177,7 +158,6 @@ void testResize() {
         freeString(s);
     }
 
-    // Edge case: resize from nullptr
     char* nullStr = nullptr;
     resizeString(nullStr, 10);
     if (nullStr != nullptr) {
@@ -201,43 +181,3 @@ int main() {
 
     return 0;
 }
-
-/*
- * Implementation hints:
- *
- * createString:
- *   char* str = new char[capacity];
- *   str[0] = '\0';
- *   return str;
- *
- * freeString:
- *   if (str != nullptr) {
- *       delete[] str;
- *       str = nullptr;
- *   }
- *
- * copyString:
- *   int len = strlen(src) + 1;
- *   char* copy = new char[len];
- *   strcpy(copy, src);
- *   return copy;
- *
- * concatenate:
- *   int lenA = (a != nullptr) ? strlen(a) : 0;
- *   int lenB = (b != nullptr) ? strlen(b) : 0;
- *   char* result = new char[lenA + lenB + 1];
- *   result[0] = '\0';
- *   if (a != nullptr) strcpy(result, a);
- *   if (b != nullptr) strcat(result, b);
- *   return result;
- *
- * resizeString:
- *   char* newStr = new char[newCapacity];
- *   newStr[0] = '\0';
- *   if (str != nullptr) {
- *       strncpy(newStr, str, newCapacity - 1);
- *       newStr[newCapacity - 1] = '\0';
- *       delete[] str;
- *   }
- *   str = newStr;
- */
