@@ -18,10 +18,13 @@ This is a written companion to the setup videos. It follows the official Virtual
 
 1. Open VirtualBox and click **New**.
 2. Name: `Ubuntu` (or similar). Type: `Linux`. Version: `Ubuntu (64-bit)`.
-3. Memory: 4096 MB is comfortable; 2048 MB works if your host is tight on RAM.
-4. CPUs: 2 if possible.
-5. Create a virtual hard disk: VDI, dynamically allocated, 25-40 GB.
-6. Before starting, attach the ISO:
+3. If prompted for an ISO, select your downloaded Ubuntu ISO and check **Skip Unattended Installation** (Ubuntu 24.04+ does not support VirtualBox's unattended install).
+4. Memory: 4096 MB is comfortable; 2048 MB works if your host is tight on RAM.
+5. CPUs: 2 if possible.
+6. Create a virtual hard disk: VDI, dynamically allocated, 25-40 GB.
+7. Before starting, configure display settings to avoid freezing issues:
+   - **Settings** -> **Display** -> set Graphics Controller to **VBoxSVGA**.
+8. If you didn't attach the ISO during creation:
    - **Settings** -> **Storage** -> empty optical drive -> choose the Ubuntu ISO.
 
 ## 3) Install Ubuntu in the VM
@@ -58,7 +61,30 @@ sudo /mnt/vbox/VBoxLinuxAdditions.run
 
 After reboot, the VM should support seamless mouse, better video resizing, and clipboard features.
 
-## 5) Enable copy/paste and drag-and-drop
+## 5) Switch to X11 session (required for clipboard on Ubuntu 24.04+)
+
+Ubuntu 24.04 and later use Wayland by default. VirtualBox clipboard sharing does **not** work reliably with Wayland—you must use an X11 session.
+
+1. Log out of Ubuntu (or at the first login screen after install).
+2. Click your username, then look for a **gear icon** in the bottom-right corner.
+3. Select **Ubuntu on Xorg** (not "Ubuntu" which uses Wayland).
+4. Log in. Clipboard sharing should now work.
+
+To make X11 the permanent default (optional):
+
+```bash
+sudo nano /etc/gdm3/custom.conf
+```
+
+Find the line `#WaylandEnable=true` and change it to:
+
+```
+WaylandEnable=false
+```
+
+Save and reboot. Ubuntu will now always start in X11 mode.
+
+## 6) Enable copy/paste and drag-and-drop
 
 1. In VirtualBox, select your VM -> **Settings** -> **General** -> **Advanced**.
 2. Set:
@@ -67,7 +93,7 @@ After reboot, the VM should support seamless mouse, better video resizing, and c
 
 You can also toggle these from the **Devices** menu while the VM is running.
 
-## 6) Shared folders (optional)
+## 7) Shared folders (optional)
 
 Shared folders make it easy to move files between your host and the Ubuntu VM.
 
@@ -84,7 +110,12 @@ sudo usermod -aG vboxsf $USER
 
 - **No 64-bit option in VirtualBox**: make sure VT-x/AMD-V is enabled in BIOS/UEFI.
 - **Guest Additions install fails**: ensure `build-essential`, `dkms`, and `linux-headers-$(uname -r)` are installed, then rerun the installer.
-- **Clipboard/drag and drop not working**: confirm Guest Additions are installed and the VM settings are set to Bidirectional.
+- **Clipboard/drag and drop not working**:
+  1. Confirm Guest Additions are installed and the VM settings are set to Bidirectional.
+  2. **On Ubuntu 24.04+**: You must use an X11 session, not Wayland. At the login screen, click the gear icon and select "Ubuntu on Xorg". See section 5 above.
+  3. Verify the clipboard service is running: `ps aux | grep VBoxClient`.
+- **Screen freezes or display issues**: Set the Graphics Controller to **VBoxSVGA** in VM Settings -> Display.
+- **VM runs slowly**: Increase RAM to 4096 MB and CPUs to 2. Enable 3D acceleration in Display settings if your host supports it.
 
 ## References
 
@@ -92,3 +123,4 @@ sudo usermod -aG vboxsf $USER
 - VirtualBox User Manual, Shared Clipboard and Drag and Drop: `https://www.virtualbox.org/manual/ch03.html#settings-general-advanced`
 - VirtualBox User Manual, Shared Folders: `https://www.virtualbox.org/manual/ch04.html#sharedfolders`
 - Ubuntu Desktop install tutorial: `https://ubuntu.com/tutorials/install-ubuntu-desktop`
+- Ubuntu Community Wiki, Guest Additions: `https://help.ubuntu.com/community/VirtualBox/GuestAdditions`
