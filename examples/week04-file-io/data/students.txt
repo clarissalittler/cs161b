@@ -1,0 +1,5 @@
+Alice 20 3.8
+Bob 22 3.2
+Carol 19 3.9
+Dave 21 2.7
+Eve 20 3.5
