@@ -99,13 +99,14 @@ All assignments include reflection questions worth 1 point out of 4.
 2. **Check the examples** - There's probably a similar example in the weekly folder
 3. **Use print statements** - `cout << "DEBUG: x = " << x << endl;`
 4. **Start small** - Get one function working before moving to the next
-5. **See TROUBLESHOOTING.md** - Common errors and solutions (coming soon)
+5. **See [TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Common errors and solutions
 
 ### Resources
 
 - **Course Overview**: [course-overview.md](course-overview.md) - Long-form guide to all concepts
 - **Practice Problems**: [practice-exercises.md](practice-exercises.md) - Hour-scale exercises
 - **Testing Guide**: [TESTING_GUIDE.md](TESTING_GUIDE.md) - How to verify your code works
+- **Troubleshooting**: [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Common errors and how to fix them
 - **Setup Help**: [UBUNTU_VIRTUALBOX_SETUP.md](UBUNTU_VIRTUALBOX_SETUP.md)
 
 ## Course Philosophy
