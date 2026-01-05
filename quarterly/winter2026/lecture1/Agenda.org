@@ -1,0 +1,11 @@
+* Agenda
+** Review of early C++
+ + variables
+ + loops
+ + I/O
+ + functions
+** Arrays
+** Iterating through arrays
+** Pointers (briefly)
+** "Variable length" arrays (maybe?)
+** C-style strings (maybe?)
