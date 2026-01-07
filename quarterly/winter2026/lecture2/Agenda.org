@@ -1,0 +1,37 @@
+* Agenda
+** c-strings
+In 161A, you dealt with the C++ string datatype. This had a lot of nice affordances.
+
+It had a notion of *length*
+
+You could access characters one-by-one via array syntax
+
+It came with a bunch of very convenient features
+** "Variable length" arrays, redux
+You can either have a size paired as a second variable for each piece of data
+
+OR
+
+you can be *clever* 
+** Char arrays (I'm sorry)
+Rather than have a size, you have a special character to signify the end of the string
+
+That character is '\0'
+
+Review: characters are /8 bits/ i.e. one byte
+
+'\0' = 0000 0000
+
+'\0' => the null character
+
+c-strings are "null terminated strings"
+
+Rather than a size, we just put a '\0' at the end to say that it's the end of the string
+
+** Writing utilities on char arrays
+*** length
+*** equality
+*** concatenation
+*** copying
+*** substring
+** A game of hangman
