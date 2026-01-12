@@ -1,0 +1,7 @@
+* Agenda
+** Parallel arrays
+** Pets database
+** Structs (how you collate data together)
+** Char arrays redux (hangman game)
+** Arrays of arrays (2d arrays)
+** Lots of examples of 2d structure thereof
