@@ -5,7 +5,8 @@ CXX = g++
 CXXFLAGS = -Wall -g
 
 PROGRAMS = 01-2d-arrays 02-structs 03-arrays-of-structs \
-           04-2d-array-row-sum 05-struct-initialization 06-array-of-structs-search
+           04-2d-array-row-sum 05-struct-initialization 06-array-of-structs-search \
+           07-char-grid-movement
 MINI_PROJECT = mini-project/contact_book
 
 .PHONY: all clean mini-project

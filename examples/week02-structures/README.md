@@ -135,6 +135,7 @@ The arrow combines dereferencing and member access into one tidy symbol.
 4. **04-2d-array-row-sum.cpp** - Summing each row in a 2D array
 5. **05-struct-initialization.cpp** - Two ways to initialize a struct
 6. **06-array-of-structs-search.cpp** - Searching an array of structs
+7. **07-char-grid-movement.cpp** - Moving on a 2D char grid with checks
 
 ## Exercises
 

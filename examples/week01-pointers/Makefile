@@ -5,7 +5,8 @@ CXX = g++
 CXXFLAGS = -Wall -g
 
 PROGRAMS = 01-pointer-basics 02-references 03-pointer-arithmetic 04-cstrings \
-           05-nullptr-check 06-pointer-swap 07-pointer-iteration
+           05-nullptr-check 06-pointer-swap 07-pointer-iteration \
+           08-cstring-input
 MINI_PROJECT = mini-project/string_toolkit
 
 .PHONY: all clean mini-project

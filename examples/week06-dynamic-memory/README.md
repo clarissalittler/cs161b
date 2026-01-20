@@ -172,6 +172,7 @@ delete ptr;  // CRASH (probably)
 4. **04-new-initialize.cpp** - Initializing values with `new`
 5. **05-dynamic-array-average.cpp** - Average from a dynamic array
 6. **06-resize-array.cpp** - Resizing by allocating and copying
+7. **07-p1-image-io.cpp** - P1 image I/O with a dynamic 2D array
 
 ## Exercises
 

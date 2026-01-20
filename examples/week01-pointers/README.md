@@ -117,6 +117,7 @@ Without the `&`, the function would get a *copy* of x, and the original would be
 5. **05-nullptr-check.cpp** - Checking pointers before dereferencing
 6. **06-pointer-swap.cpp** - Swapping with pointer parameters
 7. **07-pointer-iteration.cpp** - Iterating through arrays with pointers
+8. **08-cstring-input.cpp** - Reading C-strings with `getline`
 
 ## Exercises
 
