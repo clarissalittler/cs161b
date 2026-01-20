@@ -4,7 +4,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-PROGRAMS = 01-memory-pitfalls 02-cleanup-patterns
+PROGRAMS = 01-memory-pitfalls 02-cleanup-patterns \
+           03-nullptr-after-delete 04-early-return-cleanup
 MINI_PROJECT = mini-project/safe_strings
 
 .PHONY: all clean mini-project valgrind

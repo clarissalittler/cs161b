@@ -22,6 +22,10 @@ int main() {
     // (The compiler counts for you - this has 4 elements)
     string names[] = {"Alice", "Bob", "Carol", "Dave"};
 
+    cout << "counts[0] starts at " << counts[0] << endl;
+    cout << "counts[9] starts at " << counts[9] << endl;
+    cout << endl;
+
     // === ACCESSING ELEMENTS ===
 
     cout << "=== Accessing array elements ===" << endl;

@@ -4,7 +4,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-PROGRAMS = 01-decomposition 02-pass-by-reference 03-refactoring
+PROGRAMS = 01-decomposition 02-pass-by-reference 03-refactoring \
+           04-function-prototypes 05-return-values
 MINI_PROJECT = mini-project/grade_calculator
 
 .PHONY: all clean mini-project

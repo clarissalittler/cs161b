@@ -4,7 +4,7 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-PROGRAMS = inventory_manager grade_book
+PROGRAMS = 01-menu-loop 02-load-work-save inventory_manager grade_book
 MINI_PROJECT = mini-project/finance_tracker
 
 .PHONY: all clean mini-project
@@ -21,4 +21,4 @@ mini-project/finance_tracker: mini-project/finance_tracker.cpp
 
 clean:
 	rm -f $(PROGRAMS) $(MINI_PROJECT)
-	rm -f inventory.dat gradebook.dat  # Clean up data files
+	rm -f inventory.dat gradebook.dat items.txt  # Clean up data files

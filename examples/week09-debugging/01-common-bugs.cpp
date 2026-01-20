@@ -55,7 +55,7 @@ int sumFixed(int arr[], int size) {
 bool checkValueBuggy(int x) {
     // BUG: = is assignment, not comparison!
     // This assigns 5 to x, then evaluates to true (non-zero)
-    if (x = 5) {
+    if ((x = 5)) {
         return true;
     }
     return false;
@@ -74,7 +74,6 @@ bool checkValueFixed(int x) {
 // ============================================================
 
 void infiniteLoopBuggy() {
-    int i = 0;
     // BUG: Forgot to increment i
     // while (i < 10) {
     //     cout << i << endl;
@@ -168,8 +167,9 @@ int findMaxFixed(int arr[], int size) {
 // ============================================================
 
 int* danglingBuggy() {
-    int local = 42;
-    return &local;  // BUG: local disappears when function returns!
+    int* value = new int(42);
+    delete value;
+    return value;  // BUG: value now dangles
 }
 
 int* danglingFixed() {

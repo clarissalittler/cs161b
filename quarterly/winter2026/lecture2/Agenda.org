@@ -1,4 +1,8 @@
 * Agenda
+GIT REPO
+
+https://github.com/clarissalittler/cs161b
+
 ** c-strings
 In 161A, you dealt with the C++ string datatype. This had a lot of nice affordances.
 

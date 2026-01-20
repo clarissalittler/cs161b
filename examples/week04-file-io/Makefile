@@ -4,7 +4,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-PROGRAMS = 01-reading-files 02-writing-files 03-parsing
+PROGRAMS = 01-reading-files 02-writing-files 03-parsing \
+           04-open-check 05-read-lines 06-write-append 07-parse-delimited
 MINI_PROJECT = mini-project/todo_list
 
 .PHONY: all clean mini-project
@@ -21,4 +22,4 @@ mini-project/todo_list: mini-project/todo_list.cpp
 
 clean:
 	rm -f $(PROGRAMS) $(MINI_PROJECT)
-	rm -f output.txt students.txt data.csv  # Clean up generated files
+	rm -f output.txt students.txt data.csv log.txt  # Clean up generated files

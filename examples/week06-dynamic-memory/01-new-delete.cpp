@@ -54,7 +54,8 @@ int main() {
     delete letter;
 
     // Set to nullptr
-    answer = pi = nullptr;
+    answer = nullptr;
+    pi = nullptr;
     letter = nullptr;
 
     cout << endl;

@@ -5,7 +5,7 @@ CXX = g++
 # Note: -g flag for debug symbols (needed for GDB)
 CXXFLAGS = -Wall -g
 
-PROGRAMS = 01-common-bugs 02-gdb-practice
+PROGRAMS = 01-common-bugs 02-gdb-practice 03-off-by-one 04-uninitialized
 MINI_PROJECT = mini-project/buggy_sort mini-project/sort_solution
 
 .PHONY: all clean mini-project

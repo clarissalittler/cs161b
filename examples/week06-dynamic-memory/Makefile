@@ -4,7 +4,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-PROGRAMS = 01-new-delete 02-dynamic-arrays 03-2d-dynamic
+PROGRAMS = 01-new-delete 02-dynamic-arrays 03-2d-dynamic \
+           04-new-initialize 05-dynamic-array-average 06-resize-array
 MINI_PROJECT = mini-project/image_processor
 
 .PHONY: all clean mini-project

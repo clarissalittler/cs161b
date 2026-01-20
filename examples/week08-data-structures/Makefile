@@ -4,7 +4,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-PROGRAMS = 01-linked-list 02-stack 03-queue
+PROGRAMS = 01-linked-list 02-stack 03-queue \
+           04-linked-list-manual 05-stack-array
 MINI_PROJECT = mini-project/postfix_calculator
 
 .PHONY: all clean mini-project

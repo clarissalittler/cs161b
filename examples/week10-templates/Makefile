@@ -4,7 +4,8 @@
 CXX = g++
 CXXFLAGS = -Wall -g -std=c++11
 
-PROGRAMS = 01-function-templates 02-class-templates 03-stl-intro
+PROGRAMS = 01-function-templates 02-class-templates 03-stl-intro \
+           04-template-max 05-template-swap 06-stl-vector-basics
 MINI_PROJECT = mini-project/stats_library
 
 .PHONY: all clean mini-project

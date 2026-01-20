@@ -44,6 +44,7 @@ int main() {
     cout << "=== The importance of \\0 ===" << endl;
     char risky[5] = {'H', 'e', 'l', 'l', 'o'};  // No null terminator!
     // cout << risky << endl;  // DANGER: would read past the array!
+    cout << "First char in risky: " << risky[0] << endl;
     cout << "We made a char array without \\0. Printing it would be dangerous!" << endl;
     cout << "strlen would wander through memory looking for a \\0 somewhere..." << endl;
     cout << endl;
@@ -77,9 +78,11 @@ int main() {
     char a[] = "apple";
     char b[] = "banana";
     char c[] = "apple";
+    const char* aPtr = a;
+    const char* cPtr = c;
 
     // You can't use == to compare C-strings! It compares addresses.
-    cout << "a == c? " << (a == c) << " (compares addresses, not content!)" << endl;
+    cout << "a == c? " << (aPtr == cPtr) << " (compares addresses, not content!)" << endl;
     cout << "strcmp(a, c) = " << strcmp(a, c) << " (0 means equal)" << endl;
     cout << "strcmp(a, b) = " << strcmp(a, b) << " (negative means a < b)" << endl;
     cout << "strcmp(b, a) = " << strcmp(b, a) << " (positive means b > a)" << endl;

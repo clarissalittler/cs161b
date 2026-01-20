@@ -44,7 +44,7 @@ int main() {
 
     // Print all elements
     cout << "All elements: ";
-    for (int i = 0; i < numbers.size(); i++) {
+    for (size_t i = 0; i < numbers.size(); i++) {
         cout << numbers[i] << " ";
     }
     cout << endl << endl;
