@@ -169,6 +169,9 @@ delete ptr;  // CRASH (probably)
 1. **01-new-delete.cpp** - Basic dynamic allocation
 2. **02-dynamic-arrays.cpp** - Arrays of runtime-determined size
 3. **03-2d-dynamic.cpp** - Two-dimensional dynamic arrays
+4. **04-new-initialize.cpp** - Initializing values with `new`
+5. **05-dynamic-array-average.cpp** - Average from a dynamic array
+6. **06-resize-array.cpp** - Resizing by allocating and copying
 
 ## Exercises
 

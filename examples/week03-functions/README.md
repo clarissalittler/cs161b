@@ -206,6 +206,8 @@ printPerson(p2);
 1. **01-decomposition.cpp** - Breaking a complex task into functions
 2. **02-pass-by-reference.cpp** - When and why to use references
 3. **03-refactoring.cpp** - Before/after examples of code improvement
+4. **04-function-prototypes.cpp** - Declaring functions before `main`
+5. **05-return-values.cpp** - Returning values from functions
 
 ## Exercises
 

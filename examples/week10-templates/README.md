@@ -136,6 +136,9 @@ int count = count(v.begin(), v.end(), 1);  // Count occurrences
 1. **01-function-templates.cpp** - Writing generic functions
 2. **02-class-templates.cpp** - Template structs (preview of classes)
 3. **03-stl-intro.cpp** - Using vector, iterators, and algorithms
+4. **04-template-max.cpp** - A minimal function template
+5. **05-template-swap.cpp** - Swapping values with a template
+6. **06-stl-vector-basics.cpp** - Basic `std::vector` usage
 
 ## Exercises
 

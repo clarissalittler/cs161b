@@ -132,6 +132,9 @@ The arrow combines dereferencing and member access into one tidy symbol.
 1. **01-2d-arrays.cpp** - Creating and traversing grids
 2. **02-structs.cpp** - Defining and using custom types
 3. **03-arrays-of-structs.cpp** - The best of both worlds
+4. **04-2d-array-row-sum.cpp** - Summing each row in a 2D array
+5. **05-struct-initialization.cpp** - Two ways to initialize a struct
+6. **06-array-of-structs-search.cpp** - Searching an array of structs
 
 ## Exercises
 

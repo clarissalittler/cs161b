@@ -114,6 +114,9 @@ Without the `&`, the function would get a *copy* of x, and the original would be
 2. **02-references.cpp** - The friendlier alternative
 3. **03-pointer-arithmetic.cpp** - Arrays and pointers, the connection
 4. **04-cstrings.cpp** - C-style strings and their quirks
+5. **05-nullptr-check.cpp** - Checking pointers before dereferencing
+6. **06-pointer-swap.cpp** - Swapping with pointer parameters
+7. **07-pointer-iteration.cpp** - Iterating through arrays with pointers
 
 ## Exercises
 

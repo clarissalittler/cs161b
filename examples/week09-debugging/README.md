@@ -147,6 +147,8 @@ for (int i = 1; i <= n; i++) {
 
 1. **01-common-bugs.cpp** - Examples of common bugs and their fixes
 2. **02-gdb-practice.cpp** - A buggy program to practice debugging with GDB
+3. **03-off-by-one.cpp** - A focused off-by-one example
+4. **04-uninitialized.cpp** - A focused uninitialized variable example
 
 ## Exercises
 

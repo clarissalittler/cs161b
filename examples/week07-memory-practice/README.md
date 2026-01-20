@@ -151,6 +151,8 @@ Learn to use valgrind. It will save you hours of debugging.
 
 1. **01-memory-pitfalls.cpp** - Common mistakes demonstrated (safely)
 2. **02-cleanup-patterns.cpp** - Patterns for reliable memory management
+3. **03-nullptr-after-delete.cpp** - Setting a pointer to `nullptr` after delete
+4. **04-early-return-cleanup.cpp** - Cleaning up before an early return
 
 ## Exercises
 

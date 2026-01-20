@@ -168,6 +168,10 @@ inFile.open("../data/input.txt");  // Up one directory, then into data/
 1. **01-reading-files.cpp** - Basic file reading patterns
 2. **02-writing-files.cpp** - Creating and writing to files
 3. **03-parsing.cpp** - Reading structured data
+4. **04-open-check.cpp** - Opening files and handling errors
+5. **05-read-lines.cpp** - Reading line by line with `getline`
+6. **06-write-append.cpp** - Appending to an existing file
+7. **07-parse-delimited.cpp** - Parsing records with a delimiter
 
 Sample data files are in the `data/` subfolder.
 

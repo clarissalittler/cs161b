@@ -118,10 +118,12 @@ int main() {
 
 ## This Week's Examples
 
-Rather than separate concept files, this week has two complete programs:
+This week includes a couple of integration patterns plus two full programs:
 
-1. **inventory_manager.cpp** - A full inventory system combining structs, arrays, functions, and file I/O
-2. **grade_book.cpp** - A student grade management system
+1. **01-menu-loop.cpp** - A small menu-driven loop
+2. **02-load-work-save.cpp** - Load data, update it, and save it back
+3. **inventory_manager.cpp** - A full inventory system combining structs, arrays, functions, and file I/O
+4. **grade_book.cpp** - A student grade management system
 
 Study how they're structured. Notice:
 - How data is organized (structs + arrays)

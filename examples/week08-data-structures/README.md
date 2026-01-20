@@ -116,6 +116,8 @@ We'll explore both implementations to understand the tradeoffs.
 1. **01-linked-list.cpp** - Building and traversing a linked list
 2. **02-stack.cpp** - Stack implementations (array and linked list)
 3. **03-queue.cpp** - Queue implementations
+4. **04-linked-list-manual.cpp** - Manually linking nodes
+5. **05-stack-array.cpp** - A fixed-size array stack
 
 ## Exercises
 

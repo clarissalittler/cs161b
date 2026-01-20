@@ -164,6 +164,9 @@ Work through these in order:
 2. **02-input-output.cpp** - Getting data from the user
 3. **03-loops.cpp** - Repeating actions
 4. **04-arrays.cpp** - Working with collections
+5. **05-input-two-ints.cpp** - Reading two numbers and adding them
+6. **06-while-sentinel.cpp** - A sentinel-controlled `while` loop
+7. **07-array-sum-average.cpp** - Sum and average of a small array
 
 ## Exercises
 
