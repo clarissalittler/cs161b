@@ -132,6 +132,8 @@ Study how they're structured. Notice:
 - How file I/O handles persistence
 - How the user interface flows
 
+Optional: The `ncurses/` subfolder has terminal UI examples. Build those separately from that folder.
+
 ## Exercises
 
 ### Practice Exercise 1
