@@ -8,8 +8,11 @@ If you've taken CS161A, most of this week will feel familiar—and that's the po
 
 - Program structure (the `main` function and friends)
 - Input and output with `cin` and `cout`
+- Conditionals (`if`, `else`, and `switch`)
 - Loops (`for`, `while`, and why we need both)
 - Arrays (your first taste of managing multiple values)
+- Functions (prototypes, return values, and references)
+- Simple input validation with `cin`
 
 ## The Shape of a C++ Program
 
@@ -62,7 +65,34 @@ Note that `>>` points the other direction—data flows *from* `cin` *into* your 
 
 ### A Word of Caution
 
-`cin` is trusting. If you ask for an integer and the user types "banana", `cin` will fail silently and leave your variable in a weird state. We'll deal with input validation later. For now, just assume your users are cooperative.
+`cin` is trusting. If you ask for an integer and the user types "banana", `cin` will fail silently and leave your variable in a weird state. We'll practice basic input validation in this week.
+
+Here's the basic pattern:
+
+```cpp
+int value;
+while (!(cin >> value)) {
+    cin.clear();
+    cin.ignore(1000, '\n');
+    cout << "Try again: ";
+}
+```
+
+## Conditionals: Making Decisions
+
+Use `if`/`else` to branch based on a condition:
+
+```cpp
+if (score >= 90) {
+    cout << "A" << endl;
+} else if (score >= 80) {
+    cout << "B" << endl;
+} else {
+    cout << "Keep practicing" << endl;
+}
+```
+
+For menu-style choices, `switch` can be clearer.
 
 ## Loops: Doing Things Repeatedly
 
@@ -156,6 +186,22 @@ for (int i = 0; i < 5; i++) {
 
 Notice how the loop condition (`i < 5`) matches the array size. This is not a coincidence.
 
+## Functions: Reusable Pieces
+
+Functions let you name a chunk of work and reuse it:
+
+```cpp
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    cout << add(3, 4) << endl;
+}
+```
+
+If the function is defined after `main`, you need a prototype first.
+
 ## The Examples
 
 Work through these in order:
@@ -170,6 +216,9 @@ Work through these in order:
 8. **08-conditionals.cpp** - Basic `if`/`else` logic
 9. **09-switch.cpp** - `switch` with menu-style choices
 10. **10-input-validation.cpp** - Checking `cin` and retrying
+11. **11-function-prototypes.cpp** - Declaring functions before `main`
+12. **12-return-values.cpp** - Returning values from functions
+13. **13-pass-by-reference.cpp** - Pass by value vs. pass by reference
 
 ## Exercises
 

@@ -1,5 +1,5 @@
 /*
- * 06-recursion-basics.cpp
+ * 03-recursion-basics.cpp
  * Simple recursion with base cases.
  */
 

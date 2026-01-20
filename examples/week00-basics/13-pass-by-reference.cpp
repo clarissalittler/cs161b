@@ -1,19 +1,13 @@
 /*
- * 02-pass-by-reference.cpp
- * Understanding when to pass by value vs. by reference.
+ * 13-pass-by-reference.cpp
+ * Pass by value vs. pass by reference.
  *
  * The & symbol in a parameter declaration means "pass by reference" -
  * the function gets the actual variable, not a copy.
  */
 
 #include <iostream>
-#include <string>
 using namespace std;
-
-struct Student {
-    string name;
-    double gpa;
-};
 
 // ============================================================
 // PASS BY VALUE: The function gets a COPY
@@ -44,26 +38,6 @@ void actuallyDouble(int& x) {
 void divideWithRemainder(int dividend, int divisor, int& quotient, int& remainder) {
     quotient = dividend / divisor;
     remainder = dividend % divisor;
-}
-
-// ============================================================
-// CONST REFERENCE: Efficiency without modification
-// Avoids copying large objects, but promises not to change them
-// ============================================================
-
-void printStudent(const Student& s) {
-    // Passing by reference: no copy made (efficient for large structs)
-    // const: we promise not to modify s
-    cout << s.name << " has GPA " << s.gpa << endl;
-
-    // This would be a compiler error:
-    // s.gpa = 4.0;  // ERROR: s is const
-}
-
-void giveRaise(Student& s, double amount) {
-    // No const: we intend to modify s
-    s.gpa += amount;
-    if (s.gpa > 4.0) s.gpa = 4.0;  // Cap at 4.0
 }
 
 // ============================================================
@@ -102,14 +76,6 @@ int main() {
     cout << "17 / 5 = " << q << " remainder " << r << endl;
     cout << endl;
 
-    // === Const reference for efficiency ===
-    cout << "=== Const Reference ===" << endl;
-    Student alice = {"Alice", 3.5};
-    printStudent(alice);  // Efficient: no copy
-    giveRaise(alice, 0.3);
-    printStudent(alice);  // GPA increased
-    cout << endl;
-
     // === Arrays are always modifiable ===
     cout << "=== Arrays ===" << endl;
     int values[] = {1, 2, 3, 4, 5};
@@ -140,9 +106,6 @@ int main() {
  *   - When the function needs to modify the original
  *   - When "returning" multiple values
  *
- * PASS BY CONST REFERENCE (with const &):
- *   void foo(const string& s)
- *   - When the type is large (strings, structs, vectors)
- *   - When you only need to read, not modify
- *   - Combines efficiency (no copy) with safety (can't change)
+ * Arrays are passed as pointers, so changes in a function
+ * affect the original array.
  */

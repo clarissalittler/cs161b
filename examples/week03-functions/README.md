@@ -1,10 +1,10 @@
-# Week 3: Functions (Breaking Things Apart)
+# Week 3: Functions (Advanced Patterns)
 
 Here's a secret that experienced programmers know: the hardest part of programming isn't writing code. It's *organizing* code.
 
 A program that works but is a tangled mess of 500 lines in `main()` is worse than one that's broken into clear, understandable pieces. Why? Because programs need to be *read* and *changed* after they're written. Usually by you, three months from now, when you've forgotten how it works.
 
-This week is about **decomposition**—breaking big problems into smaller, manageable functions.
+This week still leans on **decomposition**, but it also adds some advanced function tools: recursion, overloading, default arguments, const references, and (briefly) function pointers.
 
 ## Why Functions?
 
@@ -201,27 +201,36 @@ printPerson(p1);
 printPerson(p2);
 ```
 
+## Advanced Function Tools
+
+- Function overloading
+- Default arguments
+- Const references
+- Recursion
+- Function pointers (a bit advanced)
+
 ## The Examples
 
 1. **01-decomposition.cpp** - Breaking a complex task into functions
-2. **02-pass-by-reference.cpp** - When and why to use references
-3. **03-refactoring.cpp** - Before/after examples of code improvement
-4. **04-function-prototypes.cpp** - Declaring functions before `main`
-5. **05-return-values.cpp** - Returning values from functions
-6. **06-recursion-basics.cpp** - Basic recursion with base cases
+2. **02-refactoring.cpp** - Before/after examples of code improvement
+3. **03-recursion-basics.cpp** - Basic recursion with base cases
+4. **04-function-overloading.cpp** - Same name, different parameters
+5. **05-default-arguments.cpp** - Defaults in function parameters
+6. **06-const-references.cpp** - Read-only references to avoid copies
+7. **07-function-pointers.cpp** - Function pointers (advanced topic)
 
 ## Exercises
 
 ### Basic
-1. Write a function `bool isEven(int n)` that returns true if n is even
-2. Write a function `int max(int a, int b)` that returns the larger value
+1. Write overloaded `max` functions for `int` and `double`
+2. Write a `greet` function that uses a default argument for punctuation
 
 ### Intermediate
-3. Write a function `void reverseArray(int arr[], int size)` that reverses in place
-4. Take a program with a 50+ line `main()` and extract at least 3 functions
+3. Write a recursive `sumToN(int n)` or `factorial(int n)`
+4. Write a function `int countVowels(const string& s)` using a const reference
 
 ### Challenge
-5. Write a mini-library of string helper functions: `toUpperCase`, `toLowerCase`, `countVowels`, `countWords`
+5. Build a mini-calculator using a function pointer to choose the operation
 
 ## Mini-Project: Grade Calculator
 
@@ -240,6 +249,10 @@ Your program should have (at minimum) these functions:
 - `double findHighest(double scores[], int count)`
 - `double findLowest(double scores[], int count)`
 - `void printReport(...)` - Display the results
+
+**Advanced features (optional but encouraged):**
+- Use `const string&` for name parameters
+- Add a default parameter for a curve (e.g., +5 points)
 
 **Sample run:**
 ```

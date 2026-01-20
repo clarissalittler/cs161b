@@ -1,5 +1,5 @@
 /*
- * 04-function-prototypes.cpp
+ * 11-function-prototypes.cpp
  * Declaring functions before main.
  */
 

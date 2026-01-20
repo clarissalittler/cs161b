@@ -1,5 +1,5 @@
 /*
- * 03-refactoring.cpp
+ * 02-refactoring.cpp
  * Before and after: making code cleaner through refactoring.
  *
  * This file shows a messy "before" version and a cleaned-up "after" version
