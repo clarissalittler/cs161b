@@ -1,6 +1,11 @@
 /*
  * 07-p1-image-io.cpp
  * Reading and writing a P1 (PBM) image using a dynamic 2D array.
+ *
+ * To extend this to P3:
+ * - Read three values per pixel (r, g, b) instead of one.
+ * - Store them in a Pixel struct with red/green/blue fields.
+ * - Write three values per pixel when saving.
  */
 
 #include <iostream>
