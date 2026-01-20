@@ -167,6 +167,9 @@ Work through these in order:
 5. **05-input-two-ints.cpp** - Reading two numbers and adding them
 6. **06-while-sentinel.cpp** - A sentinel-controlled `while` loop
 7. **07-array-sum-average.cpp** - Sum and average of a small array
+8. **08-conditionals.cpp** - Basic `if`/`else` logic
+9. **09-switch.cpp** - `switch` with menu-style choices
+10. **10-input-validation.cpp** - Checking `cin` and retrying
 
 ## Exercises
 

@@ -208,6 +208,7 @@ printPerson(p2);
 3. **03-refactoring.cpp** - Before/after examples of code improvement
 4. **04-function-prototypes.cpp** - Declaring functions before `main`
 5. **05-return-values.cpp** - Returning values from functions
+6. **06-recursion-basics.cpp** - Basic recursion with base cases
 
 ## Exercises
 

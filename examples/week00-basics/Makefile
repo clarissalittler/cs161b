@@ -6,7 +6,8 @@ CXXFLAGS = -Wall -g
 
 # List of all programs to build
 PROGRAMS = 01-hello 02-input-output 03-loops 04-arrays \
-           05-input-two-ints 06-while-sentinel 07-array-sum-average
+           05-input-two-ints 06-while-sentinel 07-array-sum-average \
+           08-conditionals 09-switch 10-input-validation
 MINI_PROJECT = mini-project/number_cruncher
 
 .PHONY: all clean mini-project
