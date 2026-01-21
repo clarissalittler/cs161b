@@ -1,0 +1,22 @@
+* Agenda
+** Assignment 1 was due on Sunday
+There won't be a penalty, but try to finish as soon as you can so you don't get behind.
+
+Assignment 2 is available (and we'll talk a little bit more about that today)
+** Not a lot *new* material today
+Hammering home concepts of arrays, 2d arrays, and such
+** The git repo has had a bunch of updates
+There's expanded tutorials, examples, etc.
+
+Please explore!
+
+Trying to add as much useful stuff to this class as possible
+** By next week!
+Please have done one of the following:
+ 1. installed Ubuntu in a VM on your computer
+ 2. started the using the Linux server (cslinux.pcc.edu)
+ 3. OR if you're already using macos or linux natively, you can just code in your terminal
+** Talk about assignment 1 (quick sketch)
+** Live-code a Game of Life
+** Talk about assignment 2 (quick sketches)
+** Brief follow-along on the linux server
