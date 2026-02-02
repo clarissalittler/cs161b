@@ -1,0 +1,5 @@
+liese cat 23
+taffy dog 13
+dora dog 15
+bertie dog 10
+billina chicken 7

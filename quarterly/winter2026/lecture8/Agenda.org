@@ -1,0 +1,7 @@
+* Agenda
+** structs redux (reducts?)
+** reading from a file into a struct (easy way)
+** writing from a struct into a file
+** CSVs and turning strings into streams
+** P1 and 1-bit images
+** How to do assignment 3
