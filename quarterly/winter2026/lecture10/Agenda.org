@@ -1,0 +1,35 @@
+* Agenda
+** Anouncement
+ + So coding assignment 3 is due not this weeked, but next
+ + February 22
+ + Please start early and consult the videos/lectures
+ + There are a lot of hints but you're going to be kinda lost if you don't look at the P1 parser first
+** Stacks, queues, and abstract data
+*** What is an abstract data type
+ + Encapsulation
+ + "You don't have to worry about what's *in* the data, just how you use it"
+ + Every abstract data type has an /interface/
+ + The interface is the signature of all the functions that can interact with it
+   + i.e. what operations exist on the data
+ + Abstract data types you know
+   + files
+   + streams
+   + vectors
+   + string
+ + Not abstract!
+   + arrays
+*** What is a queue
+ + FIFO: first in, first out
+ + the British call our shopping lines queues
+*** What operations should a queue have?
+ + we should be able to check its length
+ + we should be able to add something to the end of the queue
+ + we should be able to remove from the front of the queue
+ + we should be able to print all the elements of the queue in order
+*** How can we implement this?
+**** Arrays
+**** Linked Lists
+*** Array implementation of queues
+*** Talking through the logic of the linked list
+*** Some linked list idioms
+*** A linked list implementation
