@@ -1,0 +1,8 @@
+* Agenda
+** CSVs: a naive attempt at parsing
+** CSVs: where it fails
+** stringstreams
+** CSVs with stringstreams
+** Putting it all together: petsDB anew
+** templates, a 10 minute crash course
+** vectors, that thing that's like an array but way better
