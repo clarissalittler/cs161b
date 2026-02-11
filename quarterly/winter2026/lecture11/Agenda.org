@@ -1,0 +1,7 @@
+* Agenda
+** Range based for (reference and value)
+** the auto keyword
+** Implementing queues with linked lists
+** A preview of trees
+** Maybe graphs if we're feeling sassy
+** Practice time and homework help
