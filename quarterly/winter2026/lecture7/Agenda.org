@@ -1,0 +1,7 @@
+* Agenda
+** review pointers (and their relationship to arrays)
+** new and delete
+** 2d arrays two ways
+** basic file I/O
+*** ifstream
+*** ofstream

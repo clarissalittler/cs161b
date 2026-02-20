@@ -25,9 +25,7 @@ void countNeighbors(bool b[][boardSize], int cs[][boardSize]){
 	}
       }
       cs[i][j] = sum;
-      //cout << cs[i][j] << " ";
     }
-    //cout << endl;
   }
 }
 

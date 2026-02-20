@@ -33,44 +33,54 @@ int readInt(string prompt){
   return val;
 }
 
-int main(){
-
-  Scores sc;
-
-  // first we read scores in until the user
-  // says stop
-  char stop; // should be y for stop, anything else to continue
+void readScores(Scores &s){
+  char stop; 
   do {
-    scores[numScores]
+    s.scores[s.numScores]
       = readInt("Enter a score: ");
-    // the current spot which is scores[numScores]
-    numScores++;
+    
+    s.numScores++;
     cout << "stop? y/n: ";
     cin >> stop;
   }while(stop != 'y');
+}
 
+void printScores(Scores s){
+  for(int i=0; i<s.numScores; i++){
+    cout << i << ": " << s.scores[i] << endl;
+  }
+}
+
+int findMax(Scores s){
+  int max = s.scores[0];
+  for(int i=1; i<s.numScores; i++){
+    if(s.scores[i] > max){
+      max = s.scores[i];
+    }
+  }
+  return max;
+}
+
+int main(){
+
+  Scores sc;
+  
+  readScores(sc);
+  
   int option = -1;
   cout << "Choose an option: " << endl;
   cout << "0) Print scores" << endl;
   cout << "1) Find the max" << endl;
   cin >> option;
 
-  int max = scores[0];
+  int max;
   
   switch(option){
   case 0:
-    for(int i=0; i<numScores; i++){
-      cout << i << ": " << scores[i] << endl;
-    }
+    printScores(sc);
     break;
   case 1:
-    // okay BECAUSE we force you to enter
-    // at least one thing
-    for(int i=1; i<numScores; i++){
-      if(scores[i] > max){
-	max = scores[i];
-      }
-    }
+    max = findMax(sc);
     cout << "The max element is: "
 	 << max << endl;
     break;

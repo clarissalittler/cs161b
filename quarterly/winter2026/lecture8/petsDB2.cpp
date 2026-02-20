@@ -8,7 +8,6 @@ struct pet {
   int age;
 };
 
-// change ofstream& to fstream&
 void writePets(pet ps[], int petCount, ofstream& f){
   for(int i=0; i<petCount; i++){
     f << ps[i].name

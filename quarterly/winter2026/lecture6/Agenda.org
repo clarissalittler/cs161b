@@ -1,0 +1,10 @@
+* Agenda
+** Homework help!
+** Ask any questions!
+** On any topics!!!
+ e.g.
+ + Linux
+ + Array concepts
+ + 2d arrays
+ + CS 161A review
+ + Advanced concepts

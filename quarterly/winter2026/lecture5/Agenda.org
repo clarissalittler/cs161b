@@ -20,3 +20,8 @@ Please have done one of the following:
 ** Live-code a Game of Life
 ** Talk about assignment 2 (quick sketches)
 ** Brief follow-along on the linux server
+  1. Open PuTTy
+  2. cslinux.pcc.edu
+  3. Use your normal pcc login name
+  4. If you *haven't* logged in before, your g# should be your default password (GBLAHBLAH) it does start with the capital G tho
+

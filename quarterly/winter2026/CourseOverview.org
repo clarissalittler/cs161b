@@ -1,0 +1,130 @@
+#+TITLE: CS 161B Winter 2026 - Lecture Examples Overview
+
+* Lecture 1: Review and Fundamentals
+Topics: variables, loops, I/O, functions, arrays, pointers
+| File             | Description                                                                                        |
+|------------------+----------------------------------------------------------------------------------------------------|
+| brief-review.cpp | Basic C++ syntax: functions, loops, accumulators, user input with do-while                         |
+| val-vs-ref.cpp   | Pass-by-value vs pass-by-reference parameter semantics                                             |
+| array1.cpp       | Basic array creation, population, and out-of-bounds access behavior                                |
+| pointer1.cpp     | Pointer operations: address-of (&), dereferencing (*), modifying values through pointers           |
+| pointarray.cpp   | Array names as pointers; ~arr[i]~ is equivalent to ~*(arr+i)~                                     |
+| iterArray.cpp    | Practical use of arrays and pass-by-reference to collect and display user input                    |
+
+* Lecture 2: C-Strings
+Topics: null-terminated strings, char arrays, writing string utilities
+| File           | Description                                                                     |
+|----------------+---------------------------------------------------------------------------------|
+| cstring1.cpp   | Basic C-string input using ~cin >> msg~                                         |
+| cstring2.cpp   | Initializing a C-string with a string literal                                   |
+| cstring3.cpp   | Demonstrates that C-string array names cannot be reassigned                     |
+| cstring4.cpp   | Iterating through a C-string and viewing ASCII values                           |
+| cstring5.cpp   | Iterating a null-terminated string with a while loop checking for ~'\0'~        |
+| cstring6.cpp   | Iterating a null-terminated string with a for loop                              |
+| cstring7.cpp   | Custom ~strlen()~ implementation counting characters until null terminator      |
+| cstring8.cpp   | Custom ~strlen()~ and ~streq()~ for comparing C-strings                        |
+| cstring9.cpp   | Custom ~strlen()~, ~streq()~, and ~strcat()~ for C-string manipulation         |
+| cstring10.cpp  | Additional C-string utility work                                                |
+| cstringBad.cpp | Dangers of removing null terminators, breaking iteration                        |
+
+* Lecture 3: Parallel Arrays, Structs, 2D Arrays
+Topics: parallel arrays, structs, hangman game, 2D arrays
+| File             | Description                                                                              |
+|------------------+------------------------------------------------------------------------------------------|
+| pararrays.cpp    | Parallel arrays for names, grades, and audit status kept in sync                         |
+| structs0.cpp     | Basic struct syntax for bundling related fields                                          |
+| structs1.cpp     | Structs vs parallel arrays: grouping student data into a single ~Student~ struct         |
+| hangedman.cpp    | Hangman game with a fixed secret word, string manipulation, and wrong guess tracking     |
+| hangedrandom.cpp | Hangman with random word selection from a 2D array using ~srand()~ and ~rand()~          |
+| 2darrays1.cpp    | Basic 2D array creation and printing with nested loops                                   |
+
+* Lecture 4: Char Arithmetic, Ciphers, Game of Life
+Topics: character arithmetic, Caesar cipher, one-time pad, 2D arrays as maps
+| File          | Description                                                                                    |
+|---------------+------------------------------------------------------------------------------------------------|
+| charArith.cpp | Chars as small integers; arithmetic to shift between characters                                |
+| caesar.cpp    | Caesar cipher encryption/decryption with wraparound on lowercase letters                      |
+| xortest.cpp   | XOR bitwise operation on characters; XOR is self-inverse                                      |
+| oneTime.cpp   | One-time pad encryption using XOR with a key the same length as the message                   |
+| arrInit.cpp   | Array initialization syntax for regular and 2D char arrays                                    |
+| 2darr1.cpp    | Text adventure game: player moves through a grid with walls using a struct and 2D char arrays |
+| gameOfLife.cpp | Conway's Game of Life simulation on a 2D grid                                                 |
+
+* Lecture 5: Review and Practice
+Topics: reinforcing arrays, 2D arrays, structs; assignment discussion
+| File                | Description                                                                        |
+|---------------------+------------------------------------------------------------------------------------|
+| assign1ish.cpp      | Reading scores into an array with error handling; menu for printing and finding max |
+| assign1ishstruct.cpp | Refactored score manager using a struct to encapsulate array and count              |
+
+* Lecture 6: Homework Help and Image Processing
+Topics: Q&A session, Floyd-Steinberg dithering, image processing sketches
+| File        | Description                                                              |
+|-------------+--------------------------------------------------------------------------|
+| disc3.cpp   | Image processing sketch with P1/P2 image structures for pixel data      |
+
+* Lecture 7: Pointers, Dynamic Memory, File I/O
+Topics: pointer review, new/delete, 2D arrays (static vs dynamic), file I/O
+| File              | Description                                                               |
+|-------------------+---------------------------------------------------------------------------|
+| pointerreview.cpp | Basic pointer dereferencing, printing addresses and values of array elems |
+| pointernew.cpp    | Dynamic memory allocation and deallocation with ~new~ and ~delete~        |
+| newarray.cpp      | Dynamically allocated array, modifying with a function, deallocating      |
+| 2dstaticaddr.cpp  | Displaying memory addresses of elements in a static 2D array             |
+| 2dstatic.cpp      | Filling and printing a static 2D array with functions                    |
+| 2dnew.cpp         | Dynamically allocated 2D array with proper deallocation                  |
+| files1.cpp        | Basic file I/O: reading integers from one file, writing to another       |
+
+* Lecture 8: Structs and File I/O
+Topics: structs redux, reading/writing structs from/to files, P1 images
+| File        | Description                                                                                    |
+|-------------+------------------------------------------------------------------------------------------------|
+| structs1.cpp | Creating a struct, initializing fields, printing with a helper function                       |
+| petsDB1.cpp | Pet database: reads pet info from user input and writes to a file                              |
+| petsDB2.cpp | Extended pet database: reads from file, adds more pets, writes back                            |
+| p1.cpp      | Template for Project 3 with P1/P2 image structures                                            |
+| p3start.cpp | Empty starter file for Project 3                                                               |
+| livep1.cpp  | Reading, inverting, and writing P1 format images with dynamic 2D array allocation              |
+
+* Lecture 9: Stringstreams, CSVs, Templates, Vectors
+Topics: CSV parsing, stringstreams, templates, vectors
+| File                  | Description                                                                          |
+|-----------------------+--------------------------------------------------------------------------------------|
+| csv1.cpp              | Parsing CSV by manually reading integers and character delimiters                    |
+| csvbad.cpp            | Demonstrates issues with ~operator>>~ for CSV strings with delimiters                |
+| sstream1.cpp          | Parsing a hardcoded comma-delimited string with ~stringstream~ and ~stoi~            |
+| sstream2.cpp          | Combining file I/O and ~stringstream~ to parse CSV, skipping headers                 |
+| stringstreams.cpp     | Parsing CSV from a file using ~stringstream~ to split and convert values             |
+| stringstreamstruct.cpp | Reading pet CSV data into structs with ~stringstream~, handling missing fields        |
+| templates1.cpp        | Function templates: a generic ~printArray~ that works with multiple types             |
+| vectors1.cpp          | Basic vector operations: ~push_back~ and array indexing                              |
+| vectors2.cpp          | Vector skeleton (incomplete)                                                          |
+| vec1.cpp              | Vector operations: ~push_back~, ~pop_back~, element access, pass-by-reference        |
+
+* Lecture 10: Abstract Data Types, Queues, Linked Lists
+Topics: ADTs, queue interface, array-based queues, linked list introduction
+| File              | Description                                                                                    |
+|-------------------+------------------------------------------------------------------------------------------------|
+| arrayShift.cpp    | Left and right array shift operations; comparison of correct vs incorrect shift-right           |
+| queueArray.cpp    | Queue implemented with an array using enqueue/dequeue with array shifting                      |
+| pointerlinks1.cpp | Linked list introduction: creating, printing, and deleting a singly linked list; ~typedef~     |
+
+* Lecture 11: Range-For, Auto, Linked List Queues
+Topics: range-based for loops, auto keyword, linked list queue implementation
+| File         | Description                                                                                        |
+|--------------+----------------------------------------------------------------------------------------------------|
+| rangeFor.cpp | Range-based for loops with vectors: value capture vs reference capture                             |
+| auto.cpp     | The ~auto~ keyword for type inference, simplifying iteration over complex types                    |
+| queue1.cpp   | Linked-list queue with pure/impure enqueue, dequeue, size, and memory management                  |
+
+* Lecture 12: Game Project Sketch
+Topics: Scorched Earth-like game board setup
+| File                  | Description                                                               |
+|-----------------------+---------------------------------------------------------------------------|
+| ScorchedEarthLike.cpp | Skeleton for a game board with 2D arrays, tank positions, and pixel art   |
+
+* Lecture 13: Image Structs
+Topics: homework help, P3 image format
+| File         | Description                                                                        |
+|--------------+------------------------------------------------------------------------------------|
+| P3struct.cpp | Dynamic 2D array of RGB color structs for P3 image pixel data                      |
