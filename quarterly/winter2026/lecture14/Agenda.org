@@ -1,0 +1,6 @@
+* Agenda
+** Questions? Help?
+** Live-coding some weird programs
+*** A more complete dungeon crawler
+*** Physics engine in the console (this is very silly)
+*** A 
