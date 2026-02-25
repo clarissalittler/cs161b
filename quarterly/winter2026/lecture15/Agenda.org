@@ -1,0 +1,10 @@
+* Agenda
+** Answering questions?
+** Doing queues via recursion
+*** Writing recursive functions in the first place
+When we write a recursive call, if the compiler *isn't* clever it can run out of "stack space".
+
+The stack is where all the local variables for a function are stored but *also* the stack has to keep track of where to pick up after leaving a function.
+
+
+** Taking a stab at binary trees
